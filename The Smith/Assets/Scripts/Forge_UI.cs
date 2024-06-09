@@ -15,10 +15,14 @@ public class Forge_UI : MonoBehaviour
     public GameObject Hilt;
 
     [Header("UI Blades")]
+    public Texture2D shoBlade;
+    public Texture2D katBlade;
+    public Texture2D flaBlade;
 
     [Header("UI Hilts")]
     public Texture2D shoHilt;
     public Texture2D katHilt;
+    public Texture2D douHilt;
 
     //[Header("UI Extras")]
 
@@ -51,6 +55,17 @@ public class Forge_UI : MonoBehaviour
     }
 
     //Blade Options
+    public void shortswordBlade(){
+        Blade.GetComponent<RawImage>().texture = shoBlade;
+    }
+
+    public void katanaBlade(){
+        Blade.GetComponent<RawImage>().texture = katBlade;
+    }
+
+    public void flambergeBlade(){
+        Blade.GetComponent<RawImage>().texture = flaBlade;
+    }
 
     //Hilt Options
     public void shortswordHilt(){
@@ -59,5 +74,9 @@ public class Forge_UI : MonoBehaviour
 
     public void katanaHilt(){
         Hilt.GetComponent<RawImage>().texture = katHilt;
+    }
+
+    public void doubleHilt(){
+        Hilt.GetComponent<RawImage>().texture = douHilt;
     }
 }
