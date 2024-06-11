@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 44129933}
   - component: {fileID: 44129935}
   - component: {fileID: 44129934}
+  - component: {fileID: 44129936}
   m_Layer: 5
   m_Name: Hilt
   m_TagString: Untagged
@@ -468,6 +469,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44129932}
   m_CullTransparentMesh: 1
+--- !u!114 &44129936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44129932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 44129934}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 456957592}
+        m_TargetAssemblyTypeName: ForgeUIColour, Assembly-CSharp
+        m_MethodName: SwitchToHilt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &56061464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +598,7 @@ GameObject:
   - component: {fileID: 74219340}
   - component: {fileID: 74219342}
   - component: {fileID: 74219341}
+  - component: {fileID: 74219343}
   m_Layer: 5
   m_Name: Blade
   m_TagString: Untagged
@@ -603,6 +661,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74219339}
   m_CullTransparentMesh: 1
+--- !u!114 &74219343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74219339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 74219341}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 456957592}
+        m_TargetAssemblyTypeName: ForgeUIColour, Assembly-CSharp
+        m_MethodName: SwitchToBlade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &92384071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,13 +1126,14 @@ GameObject:
   - component: {fileID: 172452287}
   - component: {fileID: 172452286}
   - component: {fileID: 172452285}
+  - component: {fileID: 172452288}
   m_Layer: 5
   m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172452284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1083,31 +1198,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 172452286}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &172452286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,6 +1237,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172452283}
   m_CullTransparentMesh: 1
+--- !u!114 &172452288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172452283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 172452285}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1001 &175681982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,7 +2104,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1325444364}
         m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: extraDrop
+        m_MethodName: ColourDrop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2118,13 +2226,14 @@ GameObject:
   - component: {fileID: 431227540}
   - component: {fileID: 431227539}
   - component: {fileID: 431227538}
+  - component: {fileID: 431227541}
   m_Layer: 5
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &431227537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2189,31 +2298,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 431227539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &431227539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,6 +2337,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431227536}
   m_CullTransparentMesh: 1
+--- !u!114 &431227541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431227536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 431227538}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1 &456957587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,13 +2366,14 @@ GameObject:
   - component: {fileID: 456957591}
   - component: {fileID: 456957590}
   - component: {fileID: 456957589}
+  - component: {fileID: 456957592}
   m_Layer: 5
-  m_Name: grey
+  m_Name: White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456957588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2335,31 +2438,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 456957590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &456957590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,6 +2477,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456957587}
   m_CullTransparentMesh: 1
+--- !u!114 &456957592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456957587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 456957589}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1 &461805018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,7 +2841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &553934801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3519,7 +3615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &649769917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3545,7 +3641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -37}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &673465774
@@ -3971,13 +4067,14 @@ GameObject:
   - component: {fileID: 765806147}
   - component: {fileID: 765806146}
   - component: {fileID: 765806145}
+  - component: {fileID: 765806148}
   m_Layer: 5
   m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &765806144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4042,31 +4139,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765806146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &765806146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4105,6 +4178,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765806143}
   m_CullTransparentMesh: 1
+--- !u!114 &765806148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765806143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 765806145}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1 &782267770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4561,13 +4651,14 @@ GameObject:
   - component: {fileID: 826425610}
   - component: {fileID: 826425609}
   - component: {fileID: 826425608}
+  - component: {fileID: 826425611}
   m_Layer: 5
-  m_Name: red
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &826425607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4632,31 +4723,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 826425609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &826425609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4695,6 +4762,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826425606}
   m_CullTransparentMesh: 1
+--- !u!114 &826425611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826425606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 826425608}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1001 &840843837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4907,13 +4991,14 @@ GameObject:
   - component: {fileID: 884609281}
   - component: {fileID: 884609280}
   - component: {fileID: 884609279}
+  - component: {fileID: 884609282}
   m_Layer: 5
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &884609278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4978,31 +5063,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884609280}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &884609280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,6 +5102,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884609277}
   m_CullTransparentMesh: 1
+--- !u!114 &884609282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884609277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 884609279}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1 &911306061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,13 +5477,14 @@ GameObject:
   - component: {fileID: 1102039800}
   - component: {fileID: 1102039799}
   - component: {fileID: 1102039798}
+  - component: {fileID: 1102039801}
   m_Layer: 5
   m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1102039797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5470,31 +5549,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1102039799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1102039799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5533,6 +5588,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102039796}
   m_CullTransparentMesh: 1
+--- !u!114 &1102039801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102039796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 1102039798}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1 &1105811201
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,6 +6302,10 @@ MonoBehaviour:
   blades: {fileID: 553934800}
   hilts: {fileID: 2096254203}
   extras: {fileID: 2079103973}
+  bladeButton: {fileID: 1959604773}
+  hiltButton: {fileID: 1692903353}
+  extraButton: {fileID: 308380580}
+  completeButton: {fileID: 367660132}
   Blade: {fileID: 74219339}
   Hilt: {fileID: 44129932}
   shoBlade: {fileID: 2800000, guid: db8cabd5e72d2bb4baf7a0f0d06bac02, type: 3}
@@ -6238,6 +6314,7 @@ MonoBehaviour:
   shoHilt: {fileID: 2800000, guid: de4e84f1ede93324fa77a942fa85b3c4, type: 3}
   katHilt: {fileID: 2800000, guid: 85a8552e1872dfd44b773774f2f7dd9e, type: 3}
   douHilt: {fileID: 2800000, guid: a485fcd0e1667314d9c5a57b7e9830d7, type: 3}
+  colourDrop: {fileID: 649769916}
 --- !u!114 &1325444365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6263,6 +6340,14 @@ MonoBehaviour:
   woodHead: {fileID: 1808390345}
   leatherHead: {fileID: 1344877061}
   confirmButton: {fileID: 367660132}
+  White: {fileID: 456957587}
+  Red: {fileID: 826425606}
+  Blue: {fileID: 431227536}
+  Green: {fileID: 884609277}
+  Yellow: {fileID: 765806143}
+  Orange: {fileID: 1102039796}
+  Purple: {fileID: 172452283}
+  Black: {fileID: 1811426970}
 --- !u!1 &1344877061
 GameObject:
   m_ObjectHideFlags: 0
@@ -48168,13 +48253,14 @@ GameObject:
   - component: {fileID: 1811426974}
   - component: {fileID: 1811426973}
   - component: {fileID: 1811426972}
+  - component: {fileID: 1811426975}
   m_Layer: 5
   m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1811426971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48239,31 +48325,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1811426973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: activateBlades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1325444364}
-        m_TargetAssemblyTypeName: Forge_UI, Assembly-CSharp
-        m_MethodName: shortswordBlade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1811426973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48302,6 +48364,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811426970}
   m_CullTransparentMesh: 1
+--- !u!114 &1811426975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811426970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f6ebfb736a0f4c8b02a21fb275274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourButton: {fileID: 1811426972}
+  increaseRate: 1
+  colourValue: 0
+  Blade: {fileID: 74219341}
+  Hilt: {fileID: 44129934}
 --- !u!1001 &1834991848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49213,7 +49292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2132222691
 RectTransform:
   m_ObjectHideFlags: 0

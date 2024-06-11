@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class Forge_UI : MonoBehaviour
 {
-    [Header("Buttons")]
+    [Header("Drop Menus")]
     public GameObject blades;
     public GameObject hilts;
     public GameObject extras;
+
+    [Header("Buttons")]
+    public GameObject bladeButton;
+    public GameObject hiltButton;
+    public GameObject extraButton;
+    public GameObject completeButton;
 
     [Header("Visual")]
     public GameObject Blade;
@@ -23,6 +29,9 @@ public class Forge_UI : MonoBehaviour
     public Texture2D shoHilt;
     public Texture2D katHilt;
     public Texture2D douHilt;
+
+    [Header("Colour")]
+    public GameObject colourDrop;
 
     //[Header("UI Extras")]
 
@@ -78,5 +87,17 @@ public class Forge_UI : MonoBehaviour
 
     public void doubleHilt(){
         Hilt.GetComponent<RawImage>().texture = douHilt;
+    }
+
+    //ChangeToColour
+    public void ColourDrop(){
+        colourDrop.SetActive(true);
+        bladeButton.SetActive(false);
+        hiltButton.SetActive(false);
+        extraButton.SetActive(false);
+        completeButton.SetActive(false);
+        blades.SetActive(false);
+        hilts.SetActive(false);
+        extras.SetActive(false);
     }
 }
