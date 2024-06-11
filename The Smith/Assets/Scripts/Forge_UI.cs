@@ -10,11 +10,18 @@ public class Forge_UI : MonoBehaviour
     public GameObject hilts;
     public GameObject extras;
 
+    [Header("Backgrounds")]
+    public GameObject background;
+    public Sprite anvil;
+    public GameObject swordBackground;
+
     [Header("Buttons")]
     public GameObject bladeButton;
     public GameObject hiltButton;
     public GameObject extraButton;
     public GameObject completeButton;
+    public GameObject completeButton1;
+    public GameObject inputField;
 
     [Header("Visual")]
     public GameObject Blade;
@@ -32,6 +39,9 @@ public class Forge_UI : MonoBehaviour
 
     [Header("Colour")]
     public GameObject colourDrop;
+
+    [Header("Inventory")]
+    public GameObject inventory;
 
     //[Header("UI Extras")]
 
@@ -99,5 +109,25 @@ public class Forge_UI : MonoBehaviour
         blades.SetActive(false);
         hilts.SetActive(false);
         extras.SetActive(false);
+        inventory.SetActive(false);
+        completeButton1.SetActive(true);
+    }
+
+    //ChangeToAnvil
+    public void AnvilDrop(){
+        background.GetComponent<Image>().color = Color.white;
+        background.GetComponent<Image>().sprite = anvil; 
+        colourDrop.SetActive(false);
+        completeButton1.SetActive(false);
+        swordBackground.GetComponent<Image>().enabled = false;
+        swordBackground.transform.position += new Vector3(475, 0, 0);
+        Blade.GetComponent<Button>().enabled = false;
+        Hilt.GetComponent<Button>().enabled = false;
+        inputField.SetActive(true);
+    }
+
+    public void swordComplete(){
+        inputField.SetActive(false);
+        background.GetComponent<Image>().enabled=false;
     }
 }

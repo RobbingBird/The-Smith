@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Required for using Coroutines
 
 public class DestroyMineable : MonoBehaviour
 {
@@ -38,13 +39,20 @@ public class DestroyMineable : MonoBehaviour
                 currentMine += 1;
                 Debug.Log(currentMine);
 
-                if (currentMine >= maxMine){
+                if (currentMine >= maxMine)
+                {
                     currentMine = 0;
-                    OnGainInventory?.Invoke(hitCollider.tag);
-                    Destroy(hitCollider.gameObject);
+                    StartCoroutine(DestroyAfterDelay(hitCollider.gameObject, 1.6f)); // Start the coroutine to destroy the object after 2 seconds
                 }
             }
         }
+    }
+
+    IEnumerator DestroyAfterDelay(GameObject objectToDestroy, float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        OnGainInventory?.Invoke(objectToDestroy.tag);
+        Destroy(objectToDestroy); // Destroy the object
     }
 
     void OnDrawGizmosSelected()

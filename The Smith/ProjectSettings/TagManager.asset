@@ -8,6 +8,7 @@ TagManager:
   - Bush
   - Cow
   - Rock
+  - Anvil
   layers:
   - Default
   - TransparentFX
