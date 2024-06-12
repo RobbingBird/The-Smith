@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 public class Forge_UI : MonoBehaviour
@@ -42,6 +44,9 @@ public class Forge_UI : MonoBehaviour
 
     [Header("Inventory")]
     public GameObject inventory;
+
+    [Header("Animation")]
+    public PlayableDirector hammerSlam;
 
     //[Header("UI Extras")]
 
@@ -128,6 +133,7 @@ public class Forge_UI : MonoBehaviour
 
     public void swordComplete(){
         inputField.SetActive(false);
-        background.GetComponent<Image>().enabled=false;
+        //background.GetComponent<Image>().enabled=false;
+        hammerSlam.Play();
     }
 }
