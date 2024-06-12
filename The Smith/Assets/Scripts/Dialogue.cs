@@ -9,10 +9,11 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI swordInput;
     public GameObject player;
     private string swordName = "sword";
+    public TextMeshProUGUI nameDisplay;
 
     public void changeSwordName(){
         swordName = swordInput.text;
-        Debug.Log(swordName);
+        nameDisplay.text = swordName;
     }
 
     public void inputDisable(){
