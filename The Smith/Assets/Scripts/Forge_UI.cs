@@ -27,17 +27,25 @@ public class Forge_UI : MonoBehaviour
 
     [Header("Visual")]
     public GameObject Blade;
+    public GameObject Blade1;
     public GameObject Hilt;
+    public GameObject Hilt1;
 
     [Header("UI Blades")]
     public Texture2D shoBlade;
+    public Sprite shoBlade1;
     public Texture2D katBlade;
+    public Sprite katBlade1;
     public Texture2D flaBlade;
+    public Sprite flaBlade1;
 
     [Header("UI Hilts")]
     public Texture2D shoHilt;
+    public Sprite shoHilt1;
     public Texture2D katHilt;
+    public Sprite katHilt1;
     public Texture2D douHilt;
+    public Sprite douHilt1;
 
     [Header("Colour")]
     public GameObject colourDrop;
@@ -81,27 +89,33 @@ public class Forge_UI : MonoBehaviour
     //Blade Options
     public void shortswordBlade(){
         Blade.GetComponent<RawImage>().texture = shoBlade;
+        Blade1.GetComponent<SpriteRenderer>().sprite = shoBlade1;
     }
 
     public void katanaBlade(){
         Blade.GetComponent<RawImage>().texture = katBlade;
+        Blade1.GetComponent<SpriteRenderer>().sprite = katBlade1;
     }
 
     public void flambergeBlade(){
         Blade.GetComponent<RawImage>().texture = flaBlade;
+        Blade1.GetComponent<SpriteRenderer>().sprite = flaBlade1;
     }
 
     //Hilt Options
     public void shortswordHilt(){
         Hilt.GetComponent<RawImage>().texture = shoHilt;
+        Hilt1.GetComponent<SpriteRenderer>().sprite = shoHilt1;
     }
 
     public void katanaHilt(){
         Hilt.GetComponent<RawImage>().texture = katHilt;
+        Hilt1.GetComponent <SpriteRenderer>().sprite = katHilt1;
     }
 
     public void doubleHilt(){
         Hilt.GetComponent<RawImage>().texture = douHilt;
+        Hilt1.GetComponent<SpriteRenderer>().sprite = douHilt1;
     }
 
     //ChangeToColour
@@ -125,7 +139,7 @@ public class Forge_UI : MonoBehaviour
         colourDrop.SetActive(false);
         completeButton1.SetActive(false);
         swordBackground.GetComponent<Image>().enabled = false;
-        swordBackground.transform.position += new Vector3(475, 0, 0);
+        swordBackground.transform.position += new Vector3(500, 0, 0);
         Blade.GetComponent<Button>().enabled = false;
         Hilt.GetComponent<Button>().enabled = false;
         inputField.SetActive(true);

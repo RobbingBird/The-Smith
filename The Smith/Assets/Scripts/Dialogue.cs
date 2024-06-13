@@ -11,6 +11,12 @@ public class Dialogue : MonoBehaviour
     public GameObject player;
     private string swordName = "sword";
     public PlayableDirector dialogue;
+    public PlayableDirector slamAnimation;
+    public PlayableDirector dialogue1;
+    public TextMeshProUGUI nameDisplay;
+    public TextMeshProUGUI swordInText;
+    public GameObject UI;
+    public GameObject sword;
 
     void Start()
     {
@@ -21,6 +27,10 @@ public class Dialogue : MonoBehaviour
         {
             dialogue.stopped += OnPlayableDirectorStopped;
         }
+
+        if (slamAnimation != null){
+            slamAnimation.stopped += OnPlayableDirectorStopped1;
+        }
     }
 
     void OnDestroy()
@@ -30,6 +40,10 @@ public class Dialogue : MonoBehaviour
         {
             dialogue.stopped -= OnPlayableDirectorStopped;
         }
+
+        if (dialogue != null){
+            slamAnimation.stopped -= OnPlayableDirectorStopped1;
+        }
     }
 
     // This method will be called when the timeline stops playing
@@ -38,10 +52,22 @@ public class Dialogue : MonoBehaviour
         inputEnable();  // Enable player input after the timeline ends
     }
 
+    private void OnPlayableDirectorStopped1(PlayableDirector director){
+        Invoke("StartDialogue1", 5f);
+    }
+
+    private void StartDialogue1(){
+        inputDisable();
+        sword.SetActive(true);
+        dialogue1.Play();
+        UI.SetActive(false);
+    }
+
     public void changeSwordName()
     {
         swordName = swordInput.text;
-        Debug.Log(swordName);
+        nameDisplay.text = swordName;
+        swordInText.text = swordName + " is beautiful! let me test in on that dummy over there.";
     }
 
     public void inputDisable()

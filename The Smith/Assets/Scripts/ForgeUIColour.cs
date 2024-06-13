@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -10,8 +11,11 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public float colourValue = 0f; // The variable to be increased
 
     public RawImage Blade; // Changed to RawImage
+    public GameObject Blade1;
     public RawImage Hilt;
+    public GameObject Hilt1;
     private static RawImage currentPart;
+    private static GameObject currentPart1;
 
     private bool isHolding = false;
     private Color targetColor;
@@ -42,6 +46,7 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         // Get the initial color of the Blade
         currentPart = Blade;
+        currentPart1= Blade1;
         initialColor = currentPart.color;
     }
 
@@ -72,15 +77,18 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         isHolding = false;
         colourValue = 0f; // Reset the colour value when the button is released
         initialColor = currentPart.color;
+        currentPart1.GetComponent<SpriteRenderer>().color = currentPart.color;
     }
 
     //which sword part
     public void SwitchToBlade(){
         currentPart = Blade;
+        currentPart1 = Blade1;
     }
 
     public void SwitchToHilt(){
         currentPart = Hilt;
+        currentPart1 = Hilt1;
     }
 
     
