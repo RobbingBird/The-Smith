@@ -39,6 +39,13 @@ public class ForgeInventory : MonoBehaviour
     public GameObject Purple;
     public GameObject Black;
 
+    [Header("Tutorial")]
+    public TextMeshProUGUI tutorialText;
+    public TextMeshProUGUI tutorialText1;
+    public TextMeshProUGUI tutorialText2;
+    public bool tutorial = true;
+    public bool tutorial1 = true;
+
     // List of available colors
     private List<Color> availableColors = new List<Color>
     {
@@ -85,6 +92,8 @@ public class ForgeInventory : MonoBehaviour
 
     void GainItem(string item)
     {
+        tutorialText.enabled = false;
+
         switch (item)
         {
             case "Rock":
@@ -92,6 +101,14 @@ public class ForgeInventory : MonoBehaviour
                 steelText.text = steelAmount + "/" + steelNeeded;
                 AssignRandomColor(steelHead);
                 StartCoroutine(ShowHead(steelHead));
+                
+                if (tutorial){
+                    tutorialText1.enabled = true;
+                    tutorial = false;
+                } else{
+                    tutorialText1.enabled = false;
+                }
+
                 break;
             case "Bush":
                 woodAmount += 1;
@@ -108,6 +125,10 @@ public class ForgeInventory : MonoBehaviour
         if (steelAmount >= steelNeeded && woodAmount >= woodNeeded && leatherAmount >= leatherNeeded)
         {
             confirmButton.SetActive(true);
+            if (tutorial1){
+                tutorialText2.enabled = true;
+                tutorial1 = false;
+            }
         }
     }
 

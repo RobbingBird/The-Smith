@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +9,22 @@ public class ForgeInteract : MonoBehaviour
 {
     public GameObject completeUI;
     public float interactionDistance = 5.0f;
+    public TextMeshProUGUI tutorialText;
+    public TextMeshProUGUI tutorialText1;
+    public bool tutorial = true;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsPlayerCloseToForge())
         {
             completeUI.SetActive(!completeUI.activeSelf);
+
+            if (tutorial){
+                tutorialText.enabled = false;
+                tutorialText1.enabled = true;
+            }
+            
+            tutorial = false;
         }
         else if (!IsPlayerCloseToForge())
         {

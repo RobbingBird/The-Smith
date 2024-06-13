@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     public PlayableDirector dialogue1;
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI swordInText;
+    public TextMeshProUGUI tutorialText;
     public GameObject UI;
     public GameObject sword;
 
@@ -50,6 +51,7 @@ public class Dialogue : MonoBehaviour
     private void OnPlayableDirectorStopped(PlayableDirector director)
     {
         inputEnable();  // Enable player input after the timeline ends
+        tutorialText.enabled = true;
     }
 
     private void OnPlayableDirectorStopped1(PlayableDirector director){

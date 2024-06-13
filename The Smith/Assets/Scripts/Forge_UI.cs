@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
@@ -56,6 +57,14 @@ public class Forge_UI : MonoBehaviour
     [Header("Animation")]
     public PlayableDirector hammerSlam;
 
+    [Header("Tutorial")]
+    public TextMeshProUGUI tutorialText;
+    public TextMeshProUGUI tutorialText1;
+    public TextMeshProUGUI tutorialText2;
+    public TextMeshProUGUI tutorialText3;
+    public TextMeshProUGUI tutorialText4;
+    public bool tutorial = true;
+
     //[Header("UI Extras")]
 
     //drop menus
@@ -80,10 +89,24 @@ public class Forge_UI : MonoBehaviour
     //Sword creation images
     public void activateBlades(){
         Blade.SetActive(true);
+
+        if (tutorial){
+            tutorialText.enabled = false;
+            tutorialText1.enabled = true;
+        }
+
+        tutorial = false;
     }
 
     public void activateHilts(){
         Hilt.SetActive(true);
+
+        if (tutorial){
+            tutorialText.enabled = false;
+            tutorialText1.enabled = true;
+        }
+
+        tutorial = false;
     }
 
     //Blade Options
@@ -130,6 +153,8 @@ public class Forge_UI : MonoBehaviour
         extras.SetActive(false);
         inventory.SetActive(false);
         completeButton1.SetActive(true);
+        tutorialText2.enabled = false;
+        tutorialText3.enabled = true;
     }
 
     //ChangeToAnvil
@@ -143,11 +168,14 @@ public class Forge_UI : MonoBehaviour
         Blade.GetComponent<Button>().enabled = false;
         Hilt.GetComponent<Button>().enabled = false;
         inputField.SetActive(true);
+        tutorialText3.enabled = false;
+        tutorialText4.enabled = true;
     }
 
     public void swordComplete(){
         inputField.SetActive(false);
         //background.GetComponent<Image>().enabled=false;
         hammerSlam.Play();
+        tutorialText4.enabled = false;
     }
 }
