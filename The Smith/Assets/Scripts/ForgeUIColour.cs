@@ -10,10 +10,21 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public float increaseRate = 1f; // The rate at which the variable increases per second
     public float colourValue = 0f; // The variable to be increased
 
+    //blades & hilts
     public RawImage Blade; // Changed to RawImage
     public GameObject Blade1;
     public RawImage Hilt;
     public GameObject Hilt1;
+
+    //extras
+    public RawImage Hook;
+    public GameObject Hook1;
+    public RawImage Gems;
+    public GameObject Gems1;
+    public RawImage Spikes;
+    public GameObject Spikes1;
+
+    //statics
     private static RawImage currentPart;
     private static GameObject currentPart1;
 
@@ -61,6 +72,11 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
             // Interpolate the color of the blade
             currentPart.color = Color.Lerp(initialColor, targetColor, colourValue);
+            
+            if (currentPart == Hook){
+                Gems.color = currentPart.color;
+                Spikes.color = currentPart.color;
+            }
         }
     }
 
@@ -78,6 +94,11 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         colourValue = 0f; // Reset the colour value when the button is released
         initialColor = currentPart.color;
         currentPart1.GetComponent<SpriteRenderer>().color = currentPart.color;
+        
+        if (currentPart1 == Hook1){
+            Gems1.GetComponent<SpriteRenderer>().color = currentPart.color;
+            Spikes1.GetComponent<SpriteRenderer>().color = currentPart.color;
+        }
     }
 
     //which sword part
@@ -89,6 +110,11 @@ public class ForgeUIColour : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void SwitchToHilt(){
         currentPart = Hilt;
         currentPart1 = Hilt1;
+    }
+
+    public void SwitchToExtra(){
+        currentPart = Hook;
+        currentPart1 = Hook1;
     }
 
     

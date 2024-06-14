@@ -22,6 +22,9 @@ public class Forge_UI : MonoBehaviour
     public GameObject bladeButton;
     public GameObject hiltButton;
     public GameObject extraButton;
+    public GameObject bladeButton1;
+    public GameObject hiltButton1;
+    public GameObject extraButton1;
     public GameObject completeButton;
     public GameObject completeButton1;
     public GameObject inputField;
@@ -47,6 +50,14 @@ public class Forge_UI : MonoBehaviour
     public Sprite katHilt1;
     public Texture2D douHilt;
     public Sprite douHilt1;
+
+    [Header("UI Extras")]
+    public GameObject spikes;
+    public GameObject spikes1;
+    public GameObject gems;
+    public GameObject gems1;
+    public GameObject hook;
+    public GameObject hook1;
 
     [Header("Colour")]
     public GameObject colourDrop;
@@ -141,12 +152,37 @@ public class Forge_UI : MonoBehaviour
         Hilt1.GetComponent<SpriteRenderer>().sprite = douHilt1;
     }
 
+    //extra options
+    public void Spikes(){
+        bool isActive = spikes.activeSelf;
+        spikes.SetActive(!isActive);
+        bool isActive1 = spikes1.activeSelf;
+        spikes1.SetActive(!isActive1);
+    }
+
+    public void Gems(){
+        bool isActive = gems.activeSelf;
+        gems.SetActive(!isActive);
+        bool isActive1 = gems1.activeSelf;
+        gems1.SetActive(!isActive1);
+    }
+
+    public void Hook(){
+        bool isActive = hook.activeSelf;
+        hook.SetActive(!isActive);
+        bool isActive1 = hook1.activeSelf;
+        hook1.SetActive(!isActive1);
+    }
+
     //ChangeToColour
     public void ColourDrop(){
         colourDrop.SetActive(true);
         bladeButton.SetActive(false);
         hiltButton.SetActive(false);
         extraButton.SetActive(false);
+        bladeButton1.SetActive(true);
+        hiltButton1.SetActive(true);
+        extraButton1.SetActive(true);
         completeButton.SetActive(false);
         blades.SetActive(false);
         hilts.SetActive(false);
@@ -159,14 +195,15 @@ public class Forge_UI : MonoBehaviour
 
     //ChangeToAnvil
     public void AnvilDrop(){
+        bladeButton1.SetActive(false);
+        hiltButton1.SetActive(false);
+        extraButton1.SetActive(false);
         background.GetComponent<Image>().color = Color.white;
         background.GetComponent<Image>().sprite = anvil; 
         colourDrop.SetActive(false);
         completeButton1.SetActive(false);
         swordBackground.GetComponent<Image>().enabled = false;
         swordBackground.transform.position += new Vector3(500, 0, 0);
-        Blade.GetComponent<Button>().enabled = false;
-        Hilt.GetComponent<Button>().enabled = false;
         inputField.SetActive(true);
         tutorialText3.enabled = false;
         tutorialText4.enabled = true;
