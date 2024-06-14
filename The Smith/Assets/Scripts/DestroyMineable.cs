@@ -13,6 +13,8 @@ public class DestroyMineable : MonoBehaviour
     public int currentMine = 0;
     public int maxMine = 3;
 
+    public AudioSource hit;
+
     public delegate void gainInventory(string item);
     public static event gainInventory OnGainInventory;
 
@@ -53,6 +55,7 @@ public class DestroyMineable : MonoBehaviour
         yield return new WaitForSeconds(delay); // Wait for the specified delay
         OnGainInventory?.Invoke(objectToDestroy.tag);
         Destroy(objectToDestroy); // Destroy the object
+        hit.Play();
     }
 
     void OnDrawGizmosSelected()

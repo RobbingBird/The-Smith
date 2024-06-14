@@ -69,7 +69,7 @@ public class Dialogue : MonoBehaviour
     {
         swordName = swordInput.text;
         nameDisplay.text = swordName;
-        swordInText.text = swordName + " is beautiful! let me test in on that dummy over there.";
+        swordInText.text = swordName + " is beautiful! let me test it on that dummy over there.";
     }
 
     public void inputDisable()
