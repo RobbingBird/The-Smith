@@ -42,6 +42,12 @@ public class Forge_UI : MonoBehaviour
     public Sprite katBlade1;
     public Texture2D flaBlade;
     public Sprite flaBlade1;
+    public Texture2D bulBlade;
+    public Sprite bulBlade1;
+    public Texture2D holBlade;
+    public Sprite holBlade1;
+    public Texture2D triBlade;
+    public Sprite triBlade1;
 
     [Header("UI Hilts")]
     public Texture2D shoHilt;
@@ -50,6 +56,8 @@ public class Forge_UI : MonoBehaviour
     public Sprite katHilt1;
     public Texture2D douHilt;
     public Sprite douHilt1;
+    public Texture2D cryHilt;
+    public Sprite cryHilt1;
 
     [Header("UI Extras")]
     public GameObject spikes;
@@ -136,6 +144,21 @@ public class Forge_UI : MonoBehaviour
         Blade1.GetComponent<SpriteRenderer>().sprite = flaBlade1;
     }
 
+    public void bulkBlade(){
+        Blade.GetComponent <RawImage>().texture = bulBlade;
+        Blade1.GetComponent <SpriteRenderer>().sprite = bulBlade1;
+    }
+
+    public void holeBlade(){
+        Blade.GetComponent<RawImage> ().texture = holBlade;
+        Blade1.GetComponent<SpriteRenderer>().sprite = holBlade1;
+    }
+
+    public void tripleBlade(){
+        Blade.GetComponent<RawImage>().texture = triBlade;
+        Blade1.GetComponent<SpriteRenderer> ().sprite = triBlade1;
+    }
+
     //Hilt Options
     public void shortswordHilt(){
         Hilt.GetComponent<RawImage>().texture = shoHilt;
@@ -150,6 +173,11 @@ public class Forge_UI : MonoBehaviour
     public void doubleHilt(){
         Hilt.GetComponent<RawImage>().texture = douHilt;
         Hilt1.GetComponent<SpriteRenderer>().sprite = douHilt1;
+    }
+
+    public void crystalHilt(){
+        Hilt.GetComponent <RawImage>().texture = cryHilt;
+        Hilt1.GetComponent<SpriteRenderer>().sprite = cryHilt1;
     }
 
     //extra options
